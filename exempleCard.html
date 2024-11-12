@@ -28,6 +28,7 @@
 
       .back-face {
         transform: rotateY(180deg);
+        backface-visibility: hidden;
       }
 
       .card:hover .back-face {
@@ -35,7 +36,7 @@
       }
 
       .card:hover .front-face {
-        transform: rotateY(-180deg);
+        transform: rotateY(180deg);
       }
     </style>
     
