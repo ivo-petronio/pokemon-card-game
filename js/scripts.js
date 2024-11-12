@@ -1,4 +1,3 @@
-
 let numberOfCards = 0;
 let cardsHTML = [];
 let firstOnPair = true;
@@ -85,7 +84,7 @@ const pokemon = [
     }
 ]
 
-while ( (numberOfCards < 4 || numberOfCards > 20 || !numberOfCards ||  numberOfCards%2) )
+while ( (numberOfCards < 4 || numberOfCards > 14 || !numberOfCards ||  numberOfCards%2) )
 {
     numberOfCards = prompt("How many cards would you like to play with? (Choose between 4 and 20 cards)");
 }
@@ -157,7 +156,6 @@ function runGame() {
                 console.log(secondChoice)
                 compareCards(firstChoice, secondChoice)
             }
-            
         })
     })
 }
@@ -179,7 +177,7 @@ function compareCards(firstCard, secondCard) {
             audio.play();
             if( countCards == 0) {
                 let gameOverBtn = setTimeout(() => {
-                    gameOver.style.display = "block";
+                    gameOver.style.display = "flex";
                     gameOver.addEventListener("click", () => 
                         location.reload()
                 )}, 3000);

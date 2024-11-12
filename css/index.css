@@ -206,11 +206,11 @@ img.subtitle-image {
 *****************************/
 
 .game-over {
-    position: absolute;
-    width: 40%;
-    height: 30%;
-    background-color: #fff;
-    bottom: 0;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: transparent;
+    bottom: 150px;
     text-align: center;
     align-content: center;
     text-transform: uppercase;
@@ -221,9 +221,10 @@ img.subtitle-image {
     cursor: pointer;
     transition: .4s linear;
     display: none;
+    justify-content: center;
+    align-items: center;
 }
 
-.game-over:hover {
-    background-color: rgb(45, 216, 45);
-    color: #000;
+.game-over img {
+    position: absolute;
 }
