@@ -215,16 +215,17 @@ img.subtitle-image {
     align-content: center;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 3vmin;
-    box-shadow: 0 0 5px 1px black;
     border-radius: 10px;
     cursor: pointer;
     transition: .4s linear;
     display: none;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
+    margin-top: 20%;
 }
 
-.game-over img {
-    position: absolute;
+.game-over span {
+    color: white;
+    font-size: 3.5vmin;
 }

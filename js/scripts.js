@@ -2,8 +2,8 @@ let numberOfCards = 0;
 let cardsHTML = [];
 let firstOnPair = true;
 let secondOnPair = false;
-let firstChoice = null;
-let secondChoice = null;
+let firstCard = null;
+let secondCard = null;
 let quantAttempts = 0;
 let quantPairs = 0;
 
@@ -141,20 +141,19 @@ function runGame() {
                 card.classList.add("flipped-card");
                 card.setAttribute("autoplay", true);
                 pokemonSpeak(card);
-                firstChoice = card;
+                firstCard = card;
                 firstOnPair = false;
                 secondOnPair = true;
-                console.log(firstChoice)
 
             } else if (secondOnPair) {
+                secondCard = card;
                 card.classList.add("flipped-card");
                 card.setAttribute("autoplay", true);
                 pokemonSpeak(card);
                 firstOnPair = true;
                 secondOnPair = false;
-                secondChoice = card;
-                console.log(secondChoice)
-                compareCards(firstChoice, secondChoice)
+                console.log(secondCard)
+                compareCards(firstCard, secondCard)
             }
         })
     })
@@ -177,6 +176,7 @@ function compareCards(firstCard, secondCard) {
             audio.play();
             if( countCards == 0) {
                 let gameOverBtn = setTimeout(() => {
+                    cardsHTML.forEach( card => card.style.display = "none");
                     gameOver.style.display = "flex";
                     gameOver.addEventListener("click", () => 
                         location.reload()
