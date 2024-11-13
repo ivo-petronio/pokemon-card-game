@@ -24,63 +24,63 @@ window.onload = function()
 const pokemon = [
     {
         name: "Haunter",
-        image: "../img/haunter.gif",
-        voice: "../sfx/haunter_voice.mp3"
+        image: "img/haunter.gif",
+        voice: "sfx/haunter_voice.mp3"
     },
     {
         name: "Bulbasaur",
-        image: "../img/bulbasaur.gif",
-        voice: "../sfx/bulbasaur_voice.mp3"
+        image: "img/bulbasaur.gif",
+        voice: "sfx/bulbasaur_voice.mp3"
     },
     {
         name: "Charizard",
-        image: "../img/charizard.gif",
-        voice: "../sfx/charizard_voice.mp3"
+        image: "img/charizard.gif",
+        voice: "sfx/charizard_voice.mp3"
     },
     {
         name: "Charmander",
-        image: "../img/charmander.gif",
-        voice: "../sfx/charmander_voice.mp3"
+        image: "img/charmander.gif",
+        voice: "sfx/charmander_voice.mp3"
     },
     {
         name: "Magikarp",
-        image: "../img/magikarp.gif",
-        voice: "../sfx/magikarp_voice.mp3"
+        image: "img/magikarp.gif",
+        voice: "sfx/magikarp_voice.mp3"
     },
     {
         name: "Mankey",
-        image: "../img/mankey.gif",
-        voice: "../sfx/mankey_voice.mp3"
+        image: "img/mankey.gif",
+        voice: "sfx/mankey_voice.mp3"
     },
     {
         name: "Pidgeotto",
-        image: "../img/pidgeotto.gif",
-        voice: "../sfx/pidgeotto_voice.mp3"
+        image: "img/pidgeotto.gif",
+        voice: "sfx/pidgeotto_voice.mp3"
     },
     {
         name: "Psyduck",
-        image: "../img/psyduck.gif",
-        voice: "../sfx/psyduck_voice.mp3"
+        image: "img/psyduck.gif",
+        voice: "sfx/psyduck_voice.mp3"
     },
     {
         name: "Snorlax",
-        image: "../img/snorlax.gif",
-        voice: "../sfx/snorlax_voice.mp3"
+        image: "img/snorlax.gif",
+        voice: "sfx/snorlax_voice.mp3"
     },
     {
         name: "Squirtle",
-        image: "../img/squirtle.gif",
-        voice: "../sfx/squirtle_voice.mp3"
+        image: "img/squirtle.gif",
+        voice: "sfx/squirtle_voice.mp3"
     },
     {
         name: "Scyther",
-        image: "../img/scyther.gif",
-        voice: "../sfx/scyther_voice.mp3"
+        image: "img/scyther.gif",
+        voice: "sfx/scyther_voice.mp3"
     },
     {
         name: "Pikachu",
-        image: "../img/pikachu.gif",
-        voice: "../sfx/pikachu_voice.mp3"
+        image: "img/pikachu.gif",
+        voice: "sfx/pikachu_voice.mp3"
     }
 ]
 
@@ -172,7 +172,7 @@ function compareCards(firstCard, secondCard) {
             secondCard.style.visibility = "hidden";
             quantPairs++;
             scorePairsHTML.innerHTML = quantPairs;
-            let audio = new Audio("../sfx/pokeball.mp3");
+            let audio = new Audio("sfx/pokeball.mp3");
             audio.play();
             if( countCards == 0) {
                 let gameOverBtn = setTimeout(() => {
@@ -187,7 +187,7 @@ function compareCards(firstCard, secondCard) {
         } else {
             secondCard.classList.remove("flipped-card");
             firstCard.classList.remove("flipped-card");
-            let audio = new Audio("../sfx/error.mp3");
+            let audio = new Audio("sfx/error.mp3");
             audio.play();
         }
         firstCard = true;
