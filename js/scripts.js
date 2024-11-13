@@ -86,7 +86,7 @@ const pokemon = [
 
 while ( (numberOfCards < 4 || numberOfCards > 14 || !numberOfCards ||  numberOfCards%2) )
 {
-    numberOfCards = prompt("How many cards would you like to play with? (Choose between 4 and 20 cards)");
+    numberOfCards = prompt("How many cards would you like to play with? (Please choose between 4 and 14 cards.)");
 }
 
 /*** SHUFFLE THE CARDS ***/
