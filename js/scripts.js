@@ -7,7 +7,7 @@ let secondCard = null;
 let quantAttempts = 0;
 let quantPairs = 0;
 
-const backImageSrc = "../img/back-face.jpeg";
+const backImageSrc = "./img/back-face.jpeg";
 const cardBoard = document.querySelector(".card-board");
 const backFace = [];
 const frontFace = [];
