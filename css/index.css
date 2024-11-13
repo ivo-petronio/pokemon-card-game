@@ -15,7 +15,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #F7C026 url("img/bodyBackground.jpg");
+    background: #F7C026 url("./img/bodyBackground.jpg");
     background-size: auto;
     background-position: 110% 110%;
     background-repeat: no-repeat;
