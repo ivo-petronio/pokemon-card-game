@@ -81,6 +81,31 @@ const pokemon = [
         name: "Pikachu",
         image: "img/pikachu.gif",
         voice: "sfx/pikachu_voice.mp3"
+    },
+    {
+        name: "Butterfree",
+        image: "img/butterfree.gif",
+        voice: "sfx/butterfree_voice.mp3"
+    },
+    {
+        name: "Arbok",
+        image: "img/arbok.gif",
+        voice: "sfx/arbok_voice.gif"
+    },
+    {
+        name: "Clefairy",
+        image: "img/clefairy.gif",
+        voice: "sfx/clefairy_voice.mp3"
+    },
+    {
+        name: "Weezing",
+        image: "img/weezing.gif",
+        voice: "sfx/weezing_voice.mp3"
+    },
+    {
+        name: "Caterpie",
+        image: "img/caterpie.gif",
+        voice: "sfx/caterpie_voice.mp3"
     }
 ]
 
