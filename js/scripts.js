@@ -90,7 +90,7 @@ const pokemon = [
     {
         name: "Arbok",
         image: "img/arbok.gif",
-        voice: "sfx/arbok_voice.gif"
+        voice: "sfx/arbok_voice.mp3"
     },
     {
         name: "Clefairy",
