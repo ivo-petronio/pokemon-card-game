@@ -48,9 +48,9 @@ const pokemon = [
         voice: "sfx/magikarp_voice.mp3"
     },
     {
-        name: "Mankey",
-        image: "img/mankey.gif",
-        voice: "sfx/mankey_voice.mp3"
+        name: "Primeape",
+        image: "img/primeape.gif",
+        voice: "sfx/primeape_voice.mp3"
     },
     {
         name: "Pidgeotto",
@@ -106,7 +106,28 @@ const pokemon = [
         name: "Caterpie",
         image: "img/caterpie.gif",
         voice: "sfx/caterpie_voice.mp3"
+    },
+    {
+        name: "Magmar",
+        image: "img/magmar.gif",
+        voice: "sfx/magmar_voice.mp3"
+    },
+    {
+        name: "Meowth",
+        image: "img/meowth.gif",
+        voice: "sfx/meowth_voice.mp3"
+    },
+    {
+        name: "Kingler",
+        image: "img/kingler.gif",
+        voice: "sfx/kingler_voice.mp3"
+    },
+    {
+        name: "Onix",
+        image: "img/onix.gif",
+        voice: "sfx/onix_voice.mp3"
     }
+
 ]
 
 while ( (numberOfCards < 4 || numberOfCards > 14 || !numberOfCards ||  numberOfCards%2) )
