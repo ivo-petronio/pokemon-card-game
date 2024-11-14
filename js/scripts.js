@@ -2,8 +2,8 @@ let numberOfCards = 0;
 let cardsHTML = [];
 let firstOnPair = true;
 let secondOnPair = false;
-let firstCard = null;
-let secondCard = null;
+let firstCard = "";
+let secondCard = "";
 let quantAttempts = 0;
 let quantPairs = 0;
 
@@ -182,27 +182,24 @@ function pokemonSort() {
 }
 
 function runGame() {
-
     cardsHTML.forEach( card => {
         card.addEventListener("click", () => {
-            if (firstOnPair) {
+            if (firstCard == "") {
                 card.classList.add("flipped-card");
                 card.setAttribute("autoplay", true);
                 pokemonSpeak(card);
                 firstCard = card;
-                firstOnPair = false;
-                secondOnPair = true;
-
-            } else if (secondOnPair) {
-                secondCard = card;
+                card = null;
+                return;
+            } else if (secondCard == "") {
                 card.classList.add("flipped-card");
                 card.setAttribute("autoplay", true);
                 pokemonSpeak(card);
-                firstOnPair = true;
-                secondOnPair = false;
-                console.log(secondCard)
+                secondCard = card;
                 compareCards(firstCard, secondCard)
             }
+            firstCard = "";
+            secondCard = "";
         })
     })
 }
