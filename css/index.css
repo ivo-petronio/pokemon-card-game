@@ -30,6 +30,10 @@ body {
     align-items: center;
 }
 
+::-webkit-scrollbar {
+	width: 0;
+}
+
 #app-container::before {
     content: '';
     position: absolute;
@@ -134,6 +138,8 @@ img.subtitle-image {
     align-items: center;
     width: 100%;
     padding: 10px;
+    overflow-y: scroll;
+    margin-top: 2%;
 }
 
 .card {

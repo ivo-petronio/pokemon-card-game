@@ -130,8 +130,6 @@ const pokemon = [
 
 ]
 
-console.log(pokemon);
-
 while ( (numberOfCards < 4 || numberOfCards > 14 || !numberOfCards ||  numberOfCards%2) )
 {
     numberOfCards = prompt("How many cards would you like to play with? (Please insert an even number between 4 and 14.)");
@@ -181,6 +179,7 @@ function pokemonSort() {
     return pokemon.sort( () => Math.random() - 0.5);
 }
 
+console.log(firstCard)
 function runGame() {
     cardsHTML.forEach( card => {
         card.addEventListener("click", () => {
@@ -189,17 +188,15 @@ function runGame() {
                 card.setAttribute("autoplay", true);
                 pokemonSpeak(card);
                 firstCard = card;
-                card = null;
-                return;
             } else if (secondCard == "") {
                 card.classList.add("flipped-card");
                 card.setAttribute("autoplay", true);
                 pokemonSpeak(card);
                 secondCard = card;
                 compareCards(firstCard, secondCard)
+                firstCard = "";
+                secondCard = "";
             }
-            firstCard = "";
-            secondCard = "";
         })
     })
 }
