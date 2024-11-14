@@ -130,6 +130,8 @@ const pokemon = [
 
 ]
 
+console.log(pokemon);
+
 while ( (numberOfCards < 4 || numberOfCards > 14 || !numberOfCards ||  numberOfCards%2) )
 {
     numberOfCards = prompt("How many cards would you like to play with? (Please insert an even number between 4 and 14.)");
