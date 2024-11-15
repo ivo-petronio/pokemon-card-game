@@ -209,7 +209,6 @@ function flipCard() {
 
 
 function compareCards(firstCard, secondCard) {
-    alert("comparando cartas!")
     quantAttempts += 2;
     scoreAttemptsHTML.innerHTML = quantAttempts;
     const gameOver = document.querySelector(".game-over");
