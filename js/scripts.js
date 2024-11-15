@@ -15,9 +15,14 @@ const scoreAttemptsHTML = document.querySelector(".attempts");
 const scorePairsHTML = document.querySelector(".pairs");
 const gameOverButton = document.querySelector(".game-over");
 
+<<<<<<< HEAD
 
 function clickEvents() {
     cardsHTML.forEach( card => card.addEventListener("click", flipCard) );
+=======
+function clickEvents() {
+    cardsHTML.forEach( card => card.addEventListener('click', flipCard));
+>>>>>>> deploy
 }
 
 window.onload = function()
@@ -184,31 +189,54 @@ function pokemonSort() {
     return pokemon.sort( () => Math.random() - 0.5);
 }
 
+<<<<<<< HEAD
 function flipCard() {
 
+=======
+
+function flipCard() {
+>>>>>>> deploy
     if (firstCard == "") {
         this.classList.add("flipped-card");
         this.setAttribute("autoplay", true);
         pokemonSpeak(this);
         firstCard = this;
+<<<<<<< HEAD
     } else if (this === firstCard) {
         return;
     } 
      else if (secondCard == "") {
+=======
+    }
+    
+    else if(this === firstCard) {
+        return; 
+    }
+
+    else if (secondCard == "") {
+>>>>>>> deploy
         this.classList.add("flipped-card");
         this.setAttribute("autoplay", true);
         pokemonSpeak(this);
         secondCard = this;
+<<<<<<< HEAD
         compareCards(firstCard, secondCard);
         this.addEventListener('click', flipCard)
         firstCard = "";
         secondCard = "";
     }
 
+=======
+        compareCards(firstCard, secondCard)
+        firstCard = "";
+        secondCard = "";
+    }
+>>>>>>> deploy
 }
 
 
 function compareCards(firstCard, secondCard) {
+    alert("comparando cartas!")
     quantAttempts += 2;
     scoreAttemptsHTML.innerHTML = quantAttempts;
     const gameOver = document.querySelector(".game-over");
