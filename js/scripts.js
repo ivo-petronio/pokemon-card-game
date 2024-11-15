@@ -15,10 +15,15 @@ const scoreAttemptsHTML = document.querySelector(".attempts");
 const scorePairsHTML = document.querySelector(".pairs");
 const gameOverButton = document.querySelector(".game-over");
 
+
+function clickEvents() {
+    cardsHTML.forEach( card => card.addEventListener("click", flipCard) );
+}
+
 window.onload = function()
 {
     cardsHTML = document.querySelectorAll(".card");
-    runGame();
+    clickEvents();
 }
 
 const pokemon = [
@@ -179,27 +184,29 @@ function pokemonSort() {
     return pokemon.sort( () => Math.random() - 0.5);
 }
 
-console.log(firstCard)
-function runGame() {
-    cardsHTML.forEach( card => {
-        card.addEventListener("click", () => {
-            if (firstCard == "") {
-                card.classList.add("flipped-card");
-                card.setAttribute("autoplay", true);
-                pokemonSpeak(card);
-                firstCard = card;
-            } else if (secondCard == "") {
-                card.classList.add("flipped-card");
-                card.setAttribute("autoplay", true);
-                pokemonSpeak(card);
-                secondCard = card;
-                compareCards(firstCard, secondCard)
-                firstCard = "";
-                secondCard = "";
-            }
-        })
-    })
+function flipCard() {
+
+    if (firstCard == "") {
+        this.classList.add("flipped-card");
+        this.setAttribute("autoplay", true);
+        pokemonSpeak(this);
+        firstCard = this;
+    } else if (this === firstCard) {
+        return;
+    } 
+     else if (secondCard == "") {
+        this.classList.add("flipped-card");
+        this.setAttribute("autoplay", true);
+        pokemonSpeak(this);
+        secondCard = this;
+        compareCards(firstCard, secondCard);
+        this.addEventListener('click', flipCard)
+        firstCard = "";
+        secondCard = "";
+    }
+
 }
+
 
 function compareCards(firstCard, secondCard) {
     quantAttempts += 2;
@@ -242,3 +249,5 @@ function pokemonSpeak(card) {
     let audio = new Audio(card.getAttribute("voice-data"));
     audio.play();
 }
+
+cardsHTML.forEach( card => card.addEventListener('click', flipCard));
