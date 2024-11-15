@@ -179,7 +179,7 @@ function pokemonSort() {
     return pokemon.sort( () => Math.random() - 0.5);
 }
 
-console.log(firstCard)
+
 function runGame() {
     cardsHTML.forEach( card => {
         card.addEventListener("click", () => {
